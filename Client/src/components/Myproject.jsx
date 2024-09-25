@@ -2,7 +2,7 @@ import { Pencil, Trash,Check } from "lucide-react"
 import { Toaster, toast } from 'sonner'
 import React,{useState} from "react"
 import { deleteProject } from "../services/api"
-export const Myproject=({ title, desc, pid, cover, id,fetchprojects })=>{
+export const Myproject=({ title, desc, pid, cover,git, id,link,fetchprojects })=>{
     // const [login_user,setvisible]=useState(false);
     // const admin_user=localStorage.getItem('admin')
     // if(admin_user==='nivash_07'){
@@ -16,7 +16,7 @@ export const Myproject=({ title, desc, pid, cover, id,fetchprojects })=>{
                 console.log("delete");
                 toast('Delete successfully', {
                     className: 'bg-gradient-to-r from-red-500 to-lime-500 rounded-lg shadow-lg text-white p-3 flex gap-5 text-lg font-bold',
-                    icon: <Check />,
+                    icon: <Check />, 
                 });
                 fetchprojects()
 
@@ -38,6 +38,7 @@ export const Myproject=({ title, desc, pid, cover, id,fetchprojects })=>{
                 </p>
                 <div className="w-full h-[10%] flex flex-row justify-end items-end gap-2 ">
                  {admin_user==='nivash_07' &&(
+                    <>
                     <button
                         className="flex justify-center items-center gap-2 w-16 h-10 cursor-pointer rounded-md shadow-2xl text-white font-semibold bg-gradient-to-r from-[#fb7185] via-[#e11d48] to-[#be123c] hover:shadow-sm hover:shadow-red-100  hover:from-[#be123c] hover:to-[#fb7185]"
                         onClick={handledelete} >
@@ -58,6 +59,8 @@ export const Myproject=({ title, desc, pid, cover, id,fetchprojects })=>{
                             Button
                         </svg>
                     </button>
+                    <button onClick={git} >github</button>
+                    </>
                     )}   
 
                     <p className="text-gray-400 text-3xl">{parseInt(pid, 10) + 1}</p>

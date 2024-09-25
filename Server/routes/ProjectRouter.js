@@ -1,7 +1,7 @@
 const express=require('express')
 const router=express.Router();
 const projects=require('../models/ProjectModel');
-const Project = require('../models/ProjectModel');
+
 const { message } = require('statuses');
 
 router.get('/all',async(req,res)=>{

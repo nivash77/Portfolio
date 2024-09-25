@@ -5,19 +5,20 @@ import { getProject } from "../services/api"
 import {Addprojectcomponents} from "../components/Addprojectcomponents"
 
 const Project = () => {
-  const [projectdata, setProjectdata] = useState(null)
+  const [projectdata, setProjectdata] = useState([])
   const[admin_user,setvisible]=useState(localStorage.getItem('admin'))
   const fetchprojects = async () => {
     // const {}
     try {
       const { data } = await getProject()
+      console.log(data)
       setProjectdata(data)
     } catch (error) {
       console.warn(error);
 
     }
   }
-  console.log(projectdata)
+  
   useEffect(() => {
     fetchprojects()
   }, [])
@@ -52,8 +53,8 @@ const Project = () => {
       }
 
         {
-          projectdata.map((data, index) => (
-            <Myproject title={data.title} desc={data.desc} key={index} pid={index} cover={data.cover} id={data.id} fetchprojects={fetchprojects} />
+          projectdata?.map((data, index) => (
+            <Myproject title={data.title} desc={data.desc} key={index} pid={index} kid={index + 1} cover={data.cover} git={data.git} id={data._id} link={data.link} fetchprojects={fetchprojects} />
           ))
         }
       </div>

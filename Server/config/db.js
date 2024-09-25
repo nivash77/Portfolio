@@ -7,4 +7,4 @@ connnection.on('connected',()=>{
 connnection.on('error',()=>{
     console.log('DB error')
 })
-module.exports=mongoose
+module.exports=mongoose 
