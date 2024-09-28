@@ -11,7 +11,6 @@ const Project = () => {
     // const {}
     try {
       const { data } = await getProject()
-      console.log(data)
       setProjectdata(data)
     } catch (error) {
       console.warn(error);

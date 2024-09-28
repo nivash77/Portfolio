@@ -18,10 +18,10 @@ router.post('/add',async(req,res)=>{
         const{title,desc}=newProject
         if(!title || !desc){
             
-           return  res.status(400).json({message:"Title & Desc Required"})
+             res.status(400).json({message:"Title & Desc Required"})
         }
         const savedata= newProject.save()
-       return  res.status(201).json(savedata)
+       res.status(200).json(savedata)
     } catch (error) {
         return res.status(500).json(error) 
     }

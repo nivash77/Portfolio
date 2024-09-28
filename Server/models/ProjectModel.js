@@ -21,5 +21,5 @@ const projectschema =new mongoose.Schema({
       required:true
    }
 })
-const Project=mongoose.model('Project',projectschema)
-module.exports=Project 
+const Projects=mongoose.model('Projects',projectschema)
+module.exports=Projects

@@ -42,6 +42,7 @@ const Nav = () => {
         localStorage.removeItem('admin')
         setIsLogin(false)
         setvisi(false)
+        window.location.reload()
     }
     
     return (
@@ -72,7 +73,7 @@ const Nav = () => {
             </div>
             {
                 visi && (
-
+                   
                     <>
                         <div className="h-screen w-screen absolute top-0 left-0 bg-black/20 flex justify-center items-center z-50">
                             <div className=" h-[60%] w-[25%] bg-red z-50 flex flex-col  bg-white  shadow-lg ">
