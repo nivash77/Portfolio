@@ -53,7 +53,7 @@ const Project = () => {
 
         {
           projectdata?.map((data, index) => (
-            <Myproject title={data.title} desc={data.desc} key={index} pid={index} kid={index + 1} cover={data.cover} git={data.git} id={data._id} link={data.link} fetchprojects={fetchprojects} />
+            <Myproject title={data.title} desc={data.desc} key={index} pid={index} kid={index + 1} cover={data.cover} git={data.git} id={data._id||data.id} link={data.link} fetchprojects={fetchprojects} />
           ))
         }
       </div>
