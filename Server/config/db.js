@@ -1,5 +1,5 @@
 const mongoose= require('mongoose')
-mongoose.connect(process.env.MONGO||"mongodb+srv://admin:admin@nivash.nrt23.mongodb.net/?retryWrites=true&w=majority&appName=nivash")
+mongoose.connect(process.env.MONGO)
 const connnection=mongoose.connection;
 connnection.on('connected',()=>{
     console.log('DB connect')
