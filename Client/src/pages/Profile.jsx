@@ -2,8 +2,45 @@ import { useEffect, useState } from "react";
 import { Img } from "../components/Images";
 import { MySkills } from "../components/MySkills";
 import { Contact } from "./Contact";
+import {Myproject} from "../components/Myproject";
+import { getProject } from "../services/api"
+import {Addprojectcomponents} from "../components/Addprojectcomponents"
 
 const Profile = () => {
+
+
+  const [projectdata, setProjectdata] = useState([])
+  const[admin_user,setvisible]=useState(localStorage.getItem('admin'))
+  const fetchprojects = async () => {
+    // const {}
+    try {
+      const { data } = await getProject()
+      setProjectdata(data)
+    } catch (error) {
+      console.warn(error);
+
+    }
+  }
+  
+  useEffect(() => {
+    fetchprojects()
+  }, [])
+  if (!projectdata || projectdata.length===0) 
+    {
+    return (
+    <>
+    <div className="w-full h-[10%] flex justify-center items-center">
+      {
+        admin_user==='nivash_07' &&(
+
+          <Addprojectcomponents/>
+        )
+      }
+        </div>
+    </>
+    )
+    
+  }
   return (
     <>
       {/* Wrapper for Video Background */}
@@ -18,14 +55,15 @@ const Profile = () => {
         ></video>
 
         {/* Profile Image */}
-          <div className="flex justify-center items-center z-10 mb-6">
-          {/* <img
-            src="src/assets/img/WhatsApp Image 2024-12-02 at 3.37.00 PM.jpeg"
-            className="w-[9rem] h-[10rem] object-cover  border-4 rounded-full"
-            alt="User"
-          /> */}
-        </div>
-      <div className="relative z-10 w-[80%] min-h-fit flex justify-center gap-[5rem] h-[80vh] pt-7" >
+        <div className="absolute left-3 top-16 mb-4 ml-4">
+    <img
+      src="src\assets\img\WhatsApp Image 2025-01-14 at 17.34.58_aa4ca64d.jpg"
+      alt="Corner Image"
+      className="w-[10rem] object-contain rounded-md"
+    />
+  </div>
+
+  <div className="relative z-10 w-[80%] min-h-fit flex justify-center gap-[5rem] h-[80vh] pt-7">
     <Img />
   </div>
 
@@ -35,10 +73,14 @@ const Profile = () => {
           id="Skills"
         >
           <MySkills />
+          <h1 className="z-30 text-xl font-bold text-white bg-black bg-opacity-50 px-4 py-5 rounded ">
+  Projects
+</h1>
         </div>
 
        
-   {/* <div className="w-full h-full flex flex-row flex-wrap gap-8 justify-center items-center pb-8" id="Projects" >
+   <div className="w-full h-full flex flex-row flex-wrap gap-8 justify-center items-center pb-8" id="Projects" >
+  
         {
           admin_user==='nivash_07' &&(
           <div className="w-full h-[10%] flex justify-center items-center">
@@ -54,7 +96,7 @@ const Profile = () => {
             <Myproject title={data.title} desc={data.desc} key={index} pid={index} kid={index + 1} cover={data.cover} git={data.git} id={data._id||data.id} link={data.link} fetchprojects={fetchprojects} />
           ))
         }
-      </div> */}
+      </div>
 
         {/* Contact Section */}
         <div

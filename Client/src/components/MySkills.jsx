@@ -17,6 +17,9 @@ export const MySkills = () => {
 
   return (
     <div className="relative w-full flex flex-col items-center justify-center p-8">
+     <h1 className="z-30 text-xl font-bold text-white bg-black bg-opacity-50 px-4 py-5 rounded ">
+  Skills
+</h1>
       <div className="w-full max-w-xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 z-10">
         {skills.map((skill, index) => (
           <div

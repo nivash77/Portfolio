@@ -22,7 +22,7 @@ export const Addprojectcomponents=({fetchprojects})=>{
         }
         try{
             const res=await addProject(projectdata)
-            nave('/Contact')
+           
             console.log(res)
             if(res.status==200){
                 console.log("ADDED")
