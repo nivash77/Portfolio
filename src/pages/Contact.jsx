@@ -11,21 +11,21 @@ const Contact = () => {
     {
       title: "Unstop - Java",
       images: [
-        "src/assets/files/java beginners_page-0001.jpg",
-        "src/assets/files/java intermediate_page-0001.jpg",
-      ], // Multiple images
+        "https://ik.imagekit.io/qd01l9yk3p/ProjectMern%20image/java%20beginners_page-0001.jpg?updatedAt=1743781840588",
+        "https://ik.imagekit.io/qd01l9yk3p/ProjectMern%20image/java%20intermediate_page-0001.jpg?updatedAt=1743781840718",
+      ], 
     },
     {
       title: "Udemy - Python",
-      images: ["src/assets/files/python_page-0001.jpg"],
+      images: ["https://ik.imagekit.io/qd01l9yk3p/ProjectMern%20image/python_page-0001.jpg?updatedAt=1743781840722"],
     },
     {
       title: "Udemy - Linux & windows Commands",
-      images: ["src/assets/files/windows command line basics_page-0001.jpg"],
+      images: ["https://ik.imagekit.io/qd01l9yk3p/ProjectMern%20image/windows%20command%20line%20basics_page-0001.jpg?updatedAt=1743781840652"],
     },
     {
       title: "Unstop - DBMS",
-      images: ["src/assets/files/DBMS_page-0001.jpg"],
+      images: ["https://ik.imagekit.io/qd01l9yk3p/ProjectMern%20image/DBMS_page-0001.jpg?updatedAt=1743781840548"],
     },
   ];
 

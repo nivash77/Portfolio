@@ -8,7 +8,7 @@ export const Myproject = () => {
     const [showDetails, setShowDetails] = useState(null); 
     
     const handledelete = async () => {
-        console.log("Project ID:", id); // Check if ID is valid
+        console.log("Project ID:", id); 
         if (!id) {
             console.error("Invalid Project ID");
             return;
@@ -43,7 +43,7 @@ export const Myproject = () => {
         >
           {/* Cover Image */}
           <img
-            src="src\assets\img\Screenshot 2024-09-19 160732.png"
+            src="https://ik.imagekit.io/qd01l9yk3p/ProjectMern%20image/Screenshot%202024-09-19%20160732.png?updatedAt=1743781556081"
             alt="AI CHAT"
             className="h-[40%] sm:h-[50%] w-full object-cover rounded-md mb-4"
           />
@@ -68,7 +68,7 @@ export const Myproject = () => {
                   ✕
                 </button>
                 <img
-                  src="src\assets\img\Screenshot 2024-09-19 160732.png"
+                  src="https://ik.imagekit.io/qd01l9yk3p/ProjectMern%20image/Screenshot%202024-09-19%20160732.png?updatedAt=1743781556081"
                   alt="AI CHAT"
                   className="w-full h-40 object-cover rounded mb-4"
                 />
@@ -96,7 +96,7 @@ interface. that leverages the capabilities of Gemini AI, integrated with the Str
        >
          {/* Cover Image */}
          <img
-           src="src\assets\img\diet.png"
+           src="https://ik.imagekit.io/qd01l9yk3p/ProjectMern%20image/diet.png?updatedAt=1743781556157"
            alt="Food Recipes"
            className="h-[40%] sm:h-[50%] w-full object-cover rounded-md mb-4"
          />
@@ -121,7 +121,7 @@ interface. that leverages the capabilities of Gemini AI, integrated with the Str
                  ✕
                </button>
                <img
-                 src="src\assets\img\diet.png"
+                 src="https://ik.imagekit.io/qd01l9yk3p/ProjectMern%20image/diet.png?updatedAt=1743781556157"
                  alt="Food Recipes"
                  className="w-full h-40 object-cover rounded mb-4"
                />
