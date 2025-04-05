@@ -129,12 +129,12 @@ export const Myproject = () => {
                <p className="text-sm text-gray-600 mb-4">Co-developed a website for learning and teaching cooking skills, enabling users to explore, share, and discover recipes.</p>
          
                <a
-                 href="https://github.com/nivash77/Topping"
+                 href="https://topping-phi.vercel.app/"
                  target="_blank"
                  rel="noopener noreferrer"
                  className="text-blue-500 hover:underline mt-2 block"
                >
-                 GitHub Link
+                 Live Link
                </a>
              </div>
            </div>
