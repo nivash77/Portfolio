@@ -46,11 +46,11 @@ const Profile = () => {
         ></video>
 
         {/* Profile Image */}
-        <div className="absolute left-40 top-4 mb-4 ml-4">
+        <div className="absolute left-28 top-4 mb-4 ml-2 sm:left-32">
           <img
             src="https://ik.imagekit.io/qd01l9yk3p/ProjectMern%20image/WhatsApp%20Image%202025-01-14%20at%2017.34.58_aa4ca64d.jpg?updatedAt=1743781556438"
             alt="Corner Image"
-            className="w-16 sm:w-20 md:w-36  max-w-full h-auto object-contain rounded-md"
+            className="w-20 sm:w-20 md:w-40  max-w-full h-auto object-contain rounded-md"
           />
         </div>
 
