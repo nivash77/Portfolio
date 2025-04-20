@@ -46,7 +46,7 @@ const Profile = () => {
         ></video>
 
         {/* Profile Image */}
-        <div className="absolute left-28 top-4 mb-4 ml-2 sm:left-32">
+        <div className="absolute left-40 top-4 mb-4 ml-2 sm:left-32 ">
           <img
             src="https://ik.imagekit.io/qd01l9yk3p/ProjectMern%20image/WhatsApp%20Image%202025-01-14%20at%2017.34.58_aa4ca64d.jpg?updatedAt=1743781556438"
             alt="Corner Image"
@@ -69,9 +69,10 @@ const Profile = () => {
         </div>
 
         {/* Projects Section */}
-          <h1 className="z-30 text-lg md:text-xl font-bold text-white bg-black bg-opacity-50 px-4 py-2 md:py-5 rounded">
-            Projects
-          </h1> 
+        <h1 className="text-3xl font-bold mb-10 text-white text-center relative">
+          <span className="text-amber-400">Projects</span>
+          <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-amber-400"></span>
+        </h1> 
         <div
           className="w-full flex flex-col md:flex-row flex-wrap gap-4 md:gap-8 justify-center items-center pb-8 px-4"
           id="Projects"
