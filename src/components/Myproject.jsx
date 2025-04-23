@@ -1,34 +1,14 @@
+// Myproject.jsx
 import { Pencil, Trash, Check } from "lucide-react";
 import { Toaster, toast } from "sonner";
 import React, { useState } from "react";
-import { deleteProject } from "../services/api";
+
 
 export const Myproject = () => {
     const [admin_user, setadmin_user] = useState(localStorage.getItem("admin"));
-    const [showDetails, setShowDetails] = useState(null); 
+    const [showDetails, setShowDetails] = useState(null);
+
     
-    const handledelete = async () => {
-        console.log("Project ID:", id); 
-        if (!id) {
-            console.error("Invalid Project ID");
-            return;
-        }
-    
-        try {
-            const res = await deleteProject(id);
-            if (res.status === 200) {
-                console.log("Deleted");
-                toast("Deleted successfully", {
-                    className:
-                        "bg-gradient-to-r from-red-500 to-lime-500 rounded-lg shadow-lg text-white p-3 flex gap-5 text-lg font-bold",
-                    icon: <Check />,
-                });
-                fetchprojects();
-            }
-        } catch (error) {
-            console.log(error);
-        }
-    };
     const toggleDetails = (project) => {
       setShowDetails(showDetails === project ? null : project);
       };
@@ -127,15 +107,16 @@ export const Myproject = () => {
                  className="w-full h-40 object-cover rounded mb-4"
                />
                <h2 className="font-bold text-lg text-gray-800 mb-2">Food Recipes</h2>
-               <p className="text-sm text-gray-600 mb-4">Co-developed a website for learning and teaching cooking skills, enabling users to explore, share, and discover recipes.</p>
-         
+               <p className="text-sm text-gray-600 mb-4">Developed a food recipe application using React Native, enabling users to explore a variety of recipes with details on ingredients,
+               preparation steps, and nutritional information. This project aims to provide a user-friendly platform for cooking enthusiasts to discover and share their favorite dishes.</p>
+     
                <a
-                 href="https://topping-phi.vercel.app/"
+                 href="https://github.com/nivash77/Food-Recipes"
                  target="_blank"
                  rel="noopener noreferrer"
                  className="text-blue-500 hover:underline mt-2 block"
                >
-                 Live Link
+                 GitHub Link
                </a>
              </div>
            </div>
@@ -144,7 +125,7 @@ export const Myproject = () => {
        </div>
        <div
           className="service-card w-full sm:w-[200px] lg:w-[300px] md:h-[300px] shadow-xl cursor-pointer snap-start shrink-0 py-8 px-6 bg-white flex flex-col items-start gap-3 transition-all duration-300 group hover:bg-[#202127] rounded-md border-gray-300"
-          onClick={()=>toggleDetails("AI_CHAT")}
+          onClick={()=>toggleDetails("AI CHAT")}
         >
           {/* Cover Image */}
           <img
@@ -157,7 +138,7 @@ export const Myproject = () => {
           <p className="font-bold text-xl sm:text-2xl text-gray-600">AI CHAT</p>
       
           {/* Modal for Details */}
-          {showDetails==="AI_CHAT" && (
+          {showDetails==="AI CHAT" && (
             <div
               className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
               onClick={()=>toggleDetails("AI_CHAT")}
@@ -199,4 +180,3 @@ interface. that leverages the capabilities of Gemini AI, integrated with the Str
       );
       
 };
-

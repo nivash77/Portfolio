@@ -1,54 +1,86 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faReact, faGithub, faJava, faJs, faPython } from "@fortawesome/free-brands-svg-icons";
+import {
+  faReact,
+  faGithub,
+  faJava,
+  faJs,
+  faPython,
+} from "@fortawesome/free-brands-svg-icons";
 import { faDatabase, faCode } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 
-export const MySkills = () => {
-  const skills = [
-    { icon: faJava, label: "Java", color: "text-amber-400" },
-    { icon: faGithub, label: "Git", color: "text-blue-500" },
-    { icon: faPython, label: "Python", color: "text-yellow-500" },
-    { icon: faJs, label: "JavaScript", color: "text-yellow-400" },
-    { icon: faReact, label: "React", color: "text-cyan-400" },
-    { icon: faDatabase, label: "SQL", color: "text-blue-600" }, 
-    { icon: faCode, label: "HTML & CSS", color: "text-orange-500" }, 
-    { icon: faDatabase, label: "MongoDB", color: "text-green-500" }, 
-    { icon: faCode, label: "TailwindCSS", color: "text-teal-400" }, 
-  ];
+const skills = [
+  { icon: faJava, label: "Java", color: "text-amber-400" },
+  { icon: faGithub, label: "Git", color: "text-blue-500" },
+  { icon: faPython, label: "Python", color: "text-yellow-500" },
+  { icon: faJs, label: "JavaScript", color: "text-yellow-400" },
+  { icon: faReact, label: "React", color: "text-cyan-400" },
+  { icon: faDatabase, label: "SQL", color: "text-blue-600" },
+  { icon: faDatabase, label: "MongoDB", color: "text-green-500" },
+  { icon: faCode, label: "HTML & CSS", color: "text-orange-500" },
+  { icon: faCode, label: "TailwindCSS", color: "text-teal-400" },
+];
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, scale: 0.8, y: 30 },
+  visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.4 } },
+};
+
+const MySkills = () => {
   return (
-    <div className="relative w-full flex flex-col items-center justify-center p-6 sm:p-8">
-      <h1 className="z-30 text-lg sm:text-xl md:text-2xl font-bold text-white bg-black bg-opacity-50 px-4 py-3 sm:py-5 rounded">
-        Skills
-      </h1>
-      <div className="w-full max-w-4xl grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-10 sm:gap-12 md:gap-16 z-10">
+    <motion.div
+      id="skills"
+      className="py-24 px-4 bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 "
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={containerVariants}
+    >
+      <motion.h2
+        className="text-center  text-3xl md:text-4xl font-bold text-white mb-4"
+        initial={{ opacity: 0, y: -40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+         Skills
+      </motion.h2>
+
+      <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-12 ">
         {skills.map((skill, index) => (
-          <div
+          <motion.div
+          initial={{ opacity: 0, y: -40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
             key={index}
-            className="group relative flex flex-col items-center justify-center text-lg sm:text-xl md:text-2xl font-bold cursor-pointer"
+            variants={itemVariants}
+            className="relative group flex flex-col items-center justify-center p-6 bg-white/30 backdrop-blur-md rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
           >
             {/* Icon */}
-            <span className="relative z-10 flex items-center justify-center">
-              <FontAwesomeIcon
-                icon={skill.icon}
-                className={`text-4xl sm:text-5xl md:text-6xl ${skill.color}`}
-              />
-            </span>
-  
-            {/* Hover Text */}
-            <div
-              className="absolute opacity-0 text-xs sm:text-sm md:text-base font-medium text-white bg-gray-800 py-1 px-2 sm:py-2 sm:px-3 rounded transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-14"
-            >
-              {skill.label}
-            </div>
-  
-            {/* Decorative Divs */}
-            <div className="absolute top-0 right-0 w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 bg-lightblue rounded-tr-lg group-hover:w-full group-hover:h-full group-hover:rounded-lg transition-all duration-500"></div>
-            <div className="absolute bottom-0 left-0 w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 bg-lightblue rounded-bl-lg group-hover:w-full group-hover:h-full group-hover:rounded-lg transition-all duration-500"></div>
-          </div>
+            <FontAwesomeIcon
+  icon={skill.icon}
+  className={`text-4xl md:text-5xl ${skill.color} transition-transform duration-300 group-hover:scale-110 mb-4`}
+/>
+
+            {/* Label */}
+            <span className="absolute bottom-0 translate-y-12 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-lg font-medium text-gray-800">
+  {skill.label}
+</span>
+
+
+          </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
-  
-  
 };
+
+export default MySkills;
