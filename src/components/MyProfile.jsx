@@ -3,11 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGraduationCap, faSchool } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 
-const fadeIn = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-};
-
 const certificates = [
   {
     id: "Unstop-Java",
@@ -41,16 +36,20 @@ const certificates = [
     images: [
       "https://ik.imagekit.io/qd01l9yk3p/ProjectMern%20image/DBMS_page-0001.jpg?updatedAt=1743781840548"
     ]
-  },{
-    id:"Guvi-AIMODEL",
-    title:"Build own AI App",
-    subtitle:"Workshop",
-    images:[
-        "https://ik.imagekit.io/qd01l9yk3p/ProjectMern%20image/GuviCertification%20-%202m58091M8FS2oY76J6.png?updatedAt=1745435014653"
+  },
+  {
+    id: "Guvi-AIMODEL",
+    title: "Build own AI App",
+    subtitle: "Workshop",
+    images: [
+      "https://ik.imagekit.io/qd01l9yk3p/ProjectMern%20image/GuviCertification%20-%202m58091M8FS2oY76J6.png?updatedAt=1745435014653"
     ]
   }
 ];
-
+const fadeIn = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
 const educationItems = [
   {
     id: "be",
@@ -93,41 +92,33 @@ const MyProfile = () => {
   return (
     <div>
       {/* Certificates Section */}
-      <section id="Certificates" className="py-16 px-4 bg-gradient-to-br  text-white">
+      <section id="Certificates" className="py-16 px-4 bg-gradient-to-br text-white">
         <motion.h1
           className="text-3xl font-bold mb-10 text-center"
-          initial="hidden"
-          animate="visible"
-          variants={fadeIn}
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.3 }}
         >
           <span className="text-indigo-600">Certificates</span>
         </motion.h1>
-        <motion.div
-          className="flex flex-wrap gap-4 justify-center"
-          initial="hidden"
-          animate="visible"
-          variants={fadeIn}
-        >
-          {certificates.map((certificate) => (
-           <motion.div
-           key={certificate.id}
-           className="bg-gradient-to-br from-indigo-500 to-purple-600 border-gray-700 p-4 rounded-md cursor-pointer hover:from-indigo-400 hover:to-purple-500 hover:scale-110 transition-all duration-300 shadow-md w-full sm:w-[45%] md:w-[30%] lg:w-[23%]"
-           onClick={() => togglePopup(certificate)}
-           variants={fadeIn}
-           initial="hidden"
-           whileInView="visible"
-           viewport={{ once: true, amount: 0.2 }}
-         >
-        
-         
-              <div className="text-center">
-                <i className="fas fa-certificate text-3xl text-amber-400 mb-2"></i>
-                <h2 className="font-semibold">{certificate.title}</h2>
-                <p className="text-xs text-gray-400">{certificate.subtitle}</p>
-              </div>
+
+        <div className="flex flex-wrap gap-4 justify-center">
+          {certificates.map((certificate, i) => (
+            <motion.div
+              key={certificate.id}
+              initial={{ opacity: 0, y: -40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              variants={fadeIn}
+              onClick={() => togglePopup(certificate)}
+              className="cursor-pointer bg-gradient-to-br from-indigo-500 to-purple-600 p-4 rounded-lg shadow-md w-72 border border-gray-700 hover:scale-105 transition-transform hover:shadow-indigo-500"
+            >
+              <h2 className="font-bold text-lg text-amber-400 mb-1">{certificate.title}</h2>
+              <p className="text-sm text-white">{certificate.subtitle}</p>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
         {popupData && (
           <div
@@ -161,29 +152,26 @@ const MyProfile = () => {
       </section>
 
       {/* Education Section */}
-      <section id="Education" className="py-16 px-4 bg-gradient-to-br  text-white">
+      <section id="Education" className="py-16 px-4 bg-gradient-to-br text-white">
         <motion.h1
           className="text-3xl font-bold mb-10 text-center"
-          initial="hidden"
-          animate="visible"
-          variants={fadeIn}
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.3 }}
         >
           <span className="text-indigo-600">Education</span>
         </motion.h1>
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto"
-          initial="hidden"
-          animate="visible"
-          variants={fadeIn}
-        >
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {educationItems.map((education) => (
             <motion.div
-            initial={{ opacity: 0, y: -40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
               key={education.id}
-              className="bg-gradient-to-br from-indigo-500 to-purple-600 border border-gray-700 p-5 rounded-lg flex flex-col bg-opacity-90 shadow-md transform hover:scale-105 transition-all duration-300"
+              initial={{ opacity: 0, y: -40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               variants={fadeIn}
+              className="bg-gradient-to-br from-indigo-500 to-purple-600 border border-gray-700 p-5 rounded-lg flex flex-col bg-opacity-90 shadow-md transform hover:scale-105 transition-all duration-300"
             >
               <div className="flex items-center mb-3">
                 <div className="bg-amber-400 p-2 rounded-md mr-3">
@@ -199,7 +187,7 @@ const MyProfile = () => {
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </section>
     </div>
   );

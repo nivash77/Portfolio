@@ -16,7 +16,7 @@ const fadeUp = {
 
 const AboutSection = () => {
   return (
-    <section id="about" className="bg-white py-24">
+    <section id="about" className="bg-white py-20">
       <motion.div
         variants={containerVariants}
         initial="hidden"

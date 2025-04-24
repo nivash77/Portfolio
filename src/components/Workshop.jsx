@@ -47,10 +47,10 @@ const WorkshopAndVolunteerSection = () => {
           <motion.div
             key={index}
             className="bg-gradient-to-br from-indigo-500 to-purple-600 p-6 rounded-lg shadow-lg hover:scale-105 transition-all duration-300"
-            initial={{ opacity: 0, y: -40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            variants={fadeIn}
+            initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        variants={fadeIn}
           >
             <h2 className="text-xl font-semibold mb-2">{workshop.title}</h2>
             <p className="text-sm text-gray-300 mb-4">{workshop.subtitle}</p>
