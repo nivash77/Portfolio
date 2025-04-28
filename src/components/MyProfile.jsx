@@ -32,7 +32,7 @@ const certificates = [
   {
     id: "Unstop-DBMS",
     title: "Unstop - DBMS",
-    subtitle: "Database Management",
+    subtitle: "Advanced",
     images: [
       "https://ik.imagekit.io/qd01l9yk3p/ProjectMern%20image/DBMS_page-0001.jpg?updatedAt=1743781840548"
     ]
@@ -43,6 +43,14 @@ const certificates = [
     subtitle: "Workshop",
     images: [
       "https://ik.imagekit.io/qd01l9yk3p/ProjectMern%20image/GuviCertification%20-%202m58091M8FS2oY76J6.png?updatedAt=1745435014653"
+    ]
+  },
+  {
+    id:"Unstop-FullStack",
+    title:"Full-Stack",
+    subtitle:"Advanced",
+    images: [
+      "https://ik.imagekit.io/qd01l9yk3p/ProjectMern%20image/FullStack.jpg?updatedAt=1745856576669"
     ]
   }
 ];
