@@ -52,7 +52,7 @@ const AboutSection = () => {
           </button>
           <a
      
-            href="https://drive.google.com/uc?export=download&id=11ta6A9E9IeLa7GoVVSVS9iCU3scJleSC"
+            href="https://drive.google.com/uc?export=download&id=1g1_uf_3ZRSiL9Rf4491ULrvuyJGqAlr5"
             download
             className="px-6 py-3 bg-indigo-600 text-white font-bold rounded-lg shadow hover:bg-indigo-500 transition transform hover:scale-105 text-center"
           >
