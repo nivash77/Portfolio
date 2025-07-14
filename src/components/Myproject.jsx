@@ -107,8 +107,10 @@ export const Myproject = () => {
                  className="w-full h-40 object-cover rounded mb-4"
                />
                <h2 className="font-bold text-lg text-gray-800 mb-2">Food Recipes</h2>
-               <p className="text-sm text-gray-600 mb-4">Developed a food recipe application using React Native, enabling users to explore a variety of recipes with details on ingredients,
-               preparation steps, and nutritional information. This project aims to provide a user-friendly platform for cooking enthusiasts to discover and share their favorite dishes.</p>
+               <p className="text-sm text-gray-600 mb-4">Actively contributed to the development of a website for learning
+and teaching cooking skills from experts, built with React.js and
+Express.js, enabling users to explore, share, and discover a
+diverse range of recipes.</p>
      
                <a
                  href="https://github.com/nivash77/Food-Recipes"
