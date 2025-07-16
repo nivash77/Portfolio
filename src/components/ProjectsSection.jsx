@@ -7,7 +7,7 @@ const projects = [
     title: "BLOG Website",
     image: "https://ik.imagekit.io/qd01l9yk3p/ProjectMern%20image/images.png?updatedAt=1743784246754",
     description:
-      "Developed a modern blog website using Next.js, featuring functionalities such as adding posts, managing user details, and handling comments. This project provides a fast, dynamic, and user-friendly blogging experience.",
+      "Built a modern blog website using Next.js, MongoDB, and REST API routes, allowing users to create posts, manage profiles, browse and interact with other blogs through comments, and experience a fast, dynamic, and user-friendly interface.",
     github: "https://github.com/nivash77/BlogProject",
   },
   {
@@ -15,7 +15,7 @@ const projects = [
     title: "Food Recipes App",
     image: "https://ik.imagekit.io/qd01l9yk3p/ProjectMern%20image/diet.png?updatedAt=1743781556157",
     description:
-      "Developed a food recipe application using React Native, enabling users to explore a variety of recipes with details on ingredients, preparation steps, and nutritional information.",
+      "Actively contributed to the development of a website for learning and teaching cooking skills from experts, built with React.js and Express.js, enabling users to explore, share, and discover a diverse range of recipes.",
     github: "https://topping-phi.vercel.app/",
   },
   {
