@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faDatabase } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
-import { SiExpress, SiNextdotjs, SiTailwindcss, SiHtml5, SiCss3 } from "react-icons/si";
+import { SiExpress, SiNextdotjs, SiTailwindcss, SiHtml5, SiCss3 ,SiSpringboot} from "react-icons/si";
 
 const skills = [
   { icon: faJava, label: "Java", color: "text-amber-400", type: "fa" },
@@ -23,6 +23,7 @@ const skills = [
   { icon: <SiTailwindcss />, label: "TailwindCSS", color: "text-teal-400", type: "custom" },
   { icon: <SiExpress />, label: "Express.js", color: "text-black", type: "custom" },
   { icon: <SiNextdotjs />, label: "Next.js", color: "text-gray-800", type: "custom" },
+  {icon:<SiSpringboot/>, label:"Spring Boot", color:"text-green-600", type:"custom"}
 ];
 
 const containerVariants = {
