@@ -34,6 +34,14 @@ const projects = [
       "A console-based Library Management System project in Java that implements all core OOP concepts: Inheritance, Abstraction, Polymorphism, Encapsulation. Organized using DAO pattern and collections.",
     github: "https://github.com/nivash77/LibraryManagement",
   },
+  {
+    id: "E-Tech",
+    title: "E-Tech Learning Platform",
+    image: "https://ik.imagekit.io/qd01l9yk3p/ProjectMern%20image/Screenshot%202025-08-28%20173144.png?updatedAt=1756388570829",
+    description:
+      "I built a full-stack EdTech platform using React for the frontend and Spring Boot for the backend, with secure user authentication for teachers and students. Teachers can manage courses, lessons, quizzes, and assignments, while students can enroll, submit assignments, take quizzes, and receive certificates.",
+    github: "https://e-tech-app.vercel.app",
+  },
 ];
 
 const ProjectsSection = () => {
