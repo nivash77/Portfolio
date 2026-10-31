@@ -1,0 +1,50 @@
+:root {
+  /* Ground and ink: the page is printed ink, the paper is the light field. */
+  --ink: #0a0a0f;
+  --ink-2: #14141c;
+  --ink-3: #1d1d27;
+  --paper: #edebe7;
+  --paper-2: #e1dfda;
+  --paper-3: #d2d0ca;
+
+  --sakura: #ff4f87;
+  --sakura-deep: #d62b63;
+  --cyan: #25d0e8;
+  --amber: #ffc24b;
+
+  --muted-ink: #a7a1b2;
+  --muted-paper: #67635b;
+
+  --bg: var(--ink);
+  --fg: var(--paper);
+  --muted-fg: var(--muted-ink);
+  --surface: var(--ink-2);
+
+  --margin: clamp(16px, 2.4vw, 32px);
+  --gutter: clamp(12px, 1.6vw, 24px);
+  --section-gap: clamp(96px, 12vw, 190px);
+
+  --step-small: 0.8125rem;
+  --step-body: 1.125rem;
+  --step-lead: 1.5rem;
+  --step-head: clamp(2.25rem, 1rem + 3.4vw, 4rem);
+  --step-display: clamp(4rem, 8.5vw, 7.625rem);
+  --step-monument: clamp(3.5rem, 17.4vw, 18.75rem);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-soft: cubic-bezier(0.33, 1, 0.68, 1);
+
+  --t-press: 140ms;
+  --t-hover: 180ms;
+  --t-ui: 240ms;
+  --t-reveal: 800ms;
+  --t-open: 1100ms;
+  --stagger: 70ms;
+
+  --nav-h: 64px;
+  --z-nav: 50;
+  --z-grain: 60;
+  --z-modal: 100;
+}

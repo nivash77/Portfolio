@@ -1,0 +1,93 @@
+.portrait {
+  position: relative;
+  z-index: 0;
+  display: block;
+}
+
+.portrait::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--sakura);
+  transform: translate(10px, 10px);
+}
+
+.portrait__media {
+  position: relative;
+  display: block;
+  overflow: clip;
+  background: var(--ink);
+  border: 3px solid var(--paper);
+}
+
+.portrait--paper .portrait__media {
+  border-color: var(--ink);
+}
+
+.portrait__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 24%;
+  filter: grayscale(1) contrast(1.12) brightness(0.94);
+}
+
+.portrait__tint {
+  position: absolute;
+  inset: 0;
+  background: var(--sakura);
+  mix-blend-mode: multiply;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.portrait__dots {
+  position: absolute;
+  inset: 0;
+  background-image: url("/textures/halftone-light.svg");
+  background-size: 5px 5px;
+  mix-blend-mode: multiply;
+  opacity: 0.32;
+  pointer-events: none;
+}
+
+html.js [data-shutter] {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path var(--t-open) var(--ease-in-out);
+}
+
+html.js [data-shutter] img {
+  transform: scale(1.12);
+  transition: transform 1400ms var(--ease-soft);
+}
+
+html.js [data-shutter].is-in {
+  clip-path: inset(0);
+}
+
+html.js [data-shutter].is-in img {
+  transform: none;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-grain);
+  background-image: url("/textures/grain.svg");
+  background-size: 180px 180px;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js [data-shutter] {
+    clip-path: none;
+  }
+
+  html.js [data-shutter] img {
+    transform: none;
+  }
+}
